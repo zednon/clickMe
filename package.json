@@ -1,7 +1,7 @@
 {
   "name": "my-appnpm",
   "version": "0.1.0",
-  "homepage": "",
+  "homepage": "https://salty-river-22976.herokuapp.com/",
   "private": true,
   "dependencies": {
     "bootstrap": "^4.3.1",
@@ -19,8 +19,13 @@
     "deploy": "gh-pages -d build",
     "predeploy": "npm run build"
   },
-  
   "eslintConfig": {
     "extends": "react-app"
-  }
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
 }
