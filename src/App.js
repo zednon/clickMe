@@ -26,81 +26,99 @@ const photos = [
 {
   id: 1,
   photo: photo1,
-  clicked: false
+  alt: "Bird with a hat",
+  clicked: false,
+  
 },
 {
   id: 2,
   photo: photo2,
+  alt: "Bird with scarf",
   clicked: false
 },
 {
   id: 3,
   photo: photo3,
+  alt: "Owl with scarf",
   clicked: false
+
 },
 {
   id: 4,
   photo: photo4,
+  alt: "Owl with scarf",
   clicked: false
 },
 {
   id: 5,
   photo: photo5,
+alt: "Bunny with scarf",
   clicked: false
 },
 {
   id: 6,
   photo: photo6,
+  alt: "Fox with a head band and sweater",
   clicked: false
 },
 {
   id: 7,
   photo: photo7,
+  alt: "racoon scarf and hat",
   clicked: false
 },
 {
   id: 8,
   photo: photo8,
+  alt: "squirrel and scarf",
   clicked: false
 },
 {
   id: 9,
   photo: photo9,
+  alt: "bear with scarf and hat",
   clicked: false
 },
 {
   id: 10,
   photo: photo10,
+  alt: "Rabbit with scarf",
   clicked: false
 },
 {
   id: 11,
   photo: photo11,
+alt: "Rain Dear with scarf",
   clicked: false
 },
 {
   id: 12,
   photo: photo12,
+  alt: "Fox with scarf",
   clicked: false
 },
 {
   id: 13,
   photo: photo13,
+  alt: "Bear with sweater",
   clicked: false
 },
 {
   id: 14,
   photo: photo14,
+  alt: "Beaver with sweater",
   clicked: false
 },
 {
   id: 15,
   photo: photo15,
+  alt: "hedgehog with sweater",
   clicked: false
 },
 {
   id: 16,
   photo: photo16,
+  alt: "owl with a snowy backaround and scarf",
   clicked: false
 },
 
@@ -168,6 +186,8 @@ handlePhotosClick = (event) => {
     }, 1000)
   }
 
+
+
 }
 render() {
 let displayPhotos = this.state.photos.map(each => 
@@ -176,22 +196,27 @@ let displayPhotos = this.state.photos.map(each =>
 return (
   <div className="App">
 
-  <div id="header">
-  <div>Click Game</div>
+  <header  role="banner">
+  <h1 id="header">Click Game
   <div>{this.state.message}</div>
 <div>Score: {this.state.score} Top Score: {this.state.HighScore}</div>
-</div>
+</h1>
+</header>
+
 <Container>
   <Row>
     <Col size="mid-6">
-<div id="cute">
+<main aria="main" id="cute">
 
 {displayPhotos}
 
-</div>
+</main>
+
 </Col>
 </Row>
 </Container>
+
+
 </div>
 );
 
